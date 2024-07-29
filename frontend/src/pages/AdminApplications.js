@@ -53,7 +53,7 @@ const AdminDealer = () => {
                   <td className="py-2 px-4 border-b">{application.phone}</td>
                   <td className="py-2 px-4 border-b">{application.address}</td>
                   <td className="py-2 px-4 border-b">
-                  <a href={`http://localhost:8080/api/application/file/${application._id}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`https://eldaapp.onrender.com/api/application/file/${application._id}`} target="_blank" rel="noopener noreferrer">
                       View File
                     </a>
                   </td>
