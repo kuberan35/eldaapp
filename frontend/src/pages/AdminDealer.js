@@ -127,7 +127,7 @@ const AdminApplications = () => {
                   <td className="py-2 px-4 border-b">{application.PanNumber}</td>
                   <td className="py-2 px-4 border-b">{application.phone}</td>
                   <td className="py-2 px-4 border-b">
-                    <a href={`http://localhost:8080/api/dealer/file/${application._id}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://eldaapp.onrender.com/api/dealer/file/${application._id}`} target="_blank" rel="noopener noreferrer">
                       View File
                     </a>
                   </td>
