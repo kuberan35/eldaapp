@@ -2,7 +2,7 @@
 
 // import { upload } from "../../../backend/controller/applicationController"
 
-const backendDomin = "http://localhost:8080"
+const backendDomin = "https://eldaapp.onrender.com"
 
 const SummaryApi = {
     signUP : {
