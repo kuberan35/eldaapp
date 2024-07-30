@@ -9,12 +9,12 @@ const path = require('path');
 
 
 const app = express()
+const frontendURL = process.env.FRONTEND_URL || 'https://eldaapp-front.onrender.com';
+
 app.use(cors({
-    origin : 'https://eldaapp-front.onrender.com',
-    credentials : true
-}))
-// app.use(cors());
-// app.use(express.json({ extended: false }));
+    origin: frontendURL,
+    credentials: true,
+}));
 app.use(express.json())
 app.use(cookieParser())
 
