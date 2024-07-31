@@ -8,7 +8,7 @@ const stripe = require('stripe')('STRIPE_SECRET_KEY');
 const path = require('path');
 
 const app = express();
-const frontendURL = process.env.FRONTEND_URL || 'http://localhost:3000';
+const frontendURL = process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app';
 
 app.use(cors({
     origin: frontendURL,
