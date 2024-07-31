@@ -11,8 +11,8 @@ const Cart = () => {
     const context = useContext(Context)
     const loadingCart = new Array(4).fill(null)
 
-    let token =  localStorage.getItem("token");
-    let getToken = JSON.parse(token);
+    // let token =  localStorage.getItem("token");
+    // let getToken = JSON.parse(token);
 
 
     const fetchData = async() =>{
@@ -22,7 +22,7 @@ const Cart = () => {
             credentials : 'include',
             headers : {
                 "content-type" : 'application/json',
-                Authorization: getToken,
+                // Authorization: getToken,
             },
         })
        
@@ -53,7 +53,7 @@ const Cart = () => {
             credentials : 'include',
             headers : {
                 "content-type" : 'application/json',
-                Authorization: getToken,
+                // Authorization: getToken,
             },
             body : JSON.stringify(
                 {   
@@ -79,7 +79,7 @@ const Cart = () => {
                 credentials : 'include',
                 headers : {
                     "content-type" : 'application/json',
-                    Authorization: getToken,
+                    // Authorization: getToken,
                 },
                 body : JSON.stringify(
                     {   
@@ -104,7 +104,7 @@ const Cart = () => {
             credentials : 'include',
             headers : {
                 "content-type" : 'application/json',
-                Authorization: getToken,
+                // Authorization: getToken,
             },
             body : JSON.stringify(
                 {   
@@ -129,7 +129,7 @@ const Cart = () => {
             credentials : 'include',
             headers : {
                 "content-type" : 'application/json',
-                Authorization: getToken,
+                // Authorization: getToken,
             },
             body : JSON.stringify({
                 cartItems : data
