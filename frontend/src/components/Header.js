@@ -25,10 +25,16 @@ const Header = () => {
   const searchQuery = URLSearch.getAll("q")
   const [search,setSearch] = useState(searchQuery)
 
+  console.log(user);
+
+  let token =  localStorage.getItem("token");
+  let getToken = JSON.parse(token);
+
   const handleLogout = async() => {
     const fetchData = await fetch(SummaryApi.logout_user.url,{
       method : SummaryApi.logout_user.method,
-      credentials : 'include'
+      credentials : 'include',
+      Authourization: getToken,
     })
 
     const data = await fetchData.json()
