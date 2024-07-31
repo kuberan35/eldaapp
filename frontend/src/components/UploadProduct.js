@@ -68,15 +68,15 @@ const UploadProduct = ({
   const handleSubmit = async(e) =>{
     e.preventDefault()
     
-    let token =  localStorage.getItem("token");
-    let getToken = JSON.parse(token);
+    // let token =  localStorage.getItem("token");
+    // let getToken = JSON.parse(token);
 
     const response = await fetch(SummaryApi.uploadProduct.url,{
       method : SummaryApi.uploadProduct.method,
       credentials : 'include',
       headers : {
         "content-type" : "application/json",
-        Authorization: getToken,
+        // Authorization: getToken,
       },
       body : JSON.stringify(data)
     })
