@@ -31,11 +31,15 @@ const Login = () => {
     const handleSubmit = async(e) =>{
         e.preventDefault()
 
+        let token = localStorage.getItem('token');
+  let gettoken = JSON.parse(token);
+
         const dataResponse = await fetch(SummaryApi.signIn.url,{
             method : SummaryApi.signIn.method,
             credentials : 'include',
             headers : {
-                "content-type" : "application/json"
+                "content-type" : "application/json",
+                Authorization: gettoken,
             },
             body : JSON.stringify(data)
         })
