@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
@@ -13,22 +13,12 @@ import { setUserDetails } from './store/userSlice';
 
 function App() {
   const dispatch = useDispatch()
-  const [cartProductCount,setCartProductCount] = useState(0) 
-  // const userData = {}; 
-  
-  // let token = localStorage.getItem("token");
-  // let getToken = JSON.parse(token)
-  const fetchUserDetails = async()=>{
+  const [cartProductCount,setCartProductCount] = useState(0)
 
-    const dataResponse = await fetch(SummaryApi.current_user.url,{
+  const fetchUserDetails = async()=>{
+      const dataResponse = await fetch(SummaryApi.current_user.url,{
         method : SummaryApi.current_user.method,
-        credentials : 'include',
-        headers:{
-          "content-type" : 'application/json',
-          // Authorization: getToken,
-           
-        }
-        // body: JSON.stringify({ user: userData }),
+        credentials : 'include'
       })
 
       const dataApi = await dataResponse.json()
@@ -41,12 +31,7 @@ function App() {
   const fetchUserAddToCart = async()=>{
     const dataResponse = await fetch(SummaryApi.addToCartProductCount.url,{
       method : SummaryApi.addToCartProductCount.method,
-      credentials : 'include',
-        headers:{
-          "content-type" : 'application/json',
-          // Authorization: getToken,
-           
-        }
+      credentials : 'include'
     })
 
     const dataApi = await dataResponse.json()
