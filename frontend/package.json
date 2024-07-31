@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://eldaapp.onrender.com",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
     "@stripe/react-stripe-js": "^2.7.1",
