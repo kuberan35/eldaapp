@@ -16,8 +16,8 @@ function App() {
   const [cartProductCount,setCartProductCount] = useState(0) 
   // const userData = {}; 
   
-  let token = localStorage.getItem("token");
-  let getToken = JSON.parse(token)
+  // let token = localStorage.getItem("token");
+  // let getToken = JSON.parse(token)
   const fetchUserDetails = async()=>{
 
     const dataResponse = await fetch(SummaryApi.current_user.url,{
@@ -25,7 +25,7 @@ function App() {
         credentials : 'include',
         headers:{
           "content-type" : 'application/json',
-          Authorization: getToken,
+          // Authorization: getToken,
            
         }
         // body: JSON.stringify({ user: userData }),
@@ -44,7 +44,7 @@ function App() {
       credentials : 'include',
         headers:{
           "content-type" : 'application/json',
-          Authorization: getToken,
+          // Authorization: getToken,
            
         }
     })
