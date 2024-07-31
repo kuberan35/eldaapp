@@ -8,16 +8,16 @@ const stripe = require('stripe')('STRIPE_SECRET_KEY');
 const path = require('path');
 
 const app = express();
-const frontendURL = process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app';
+//const frontendURL = process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app';
 
 app.use(cors({
-    origin: frontendURL,
+    origin: process.env.FRONTEND_URL,
     credentials: true,
 }));
 
 // app.set("trust proxy",1);
 app.use(express.json());
-app.use(cookieParser());
+//app.use(cookieParser());
 
 app.use("/api", router);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
