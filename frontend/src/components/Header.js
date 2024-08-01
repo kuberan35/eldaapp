@@ -28,7 +28,8 @@ const Header = () => {
  const handleLogout = async() => {
     const fetchData = await fetch(SummaryApi.logout_user.url,{
       method : SummaryApi.logout_user.method,
-      credentials : 'include'
+      credentials : 'include',
+    
     })
 
     const data = await fetchData.json()
@@ -54,6 +55,9 @@ const Header = () => {
     }else{
       navigate("/search")
     }
+  }
+  const handleBack = () => {
+    navigate(-1);
   }
   // const toggleNavbar = () => {
   //   setMobileMenuDisplay(!mobileMenuDisplay);
