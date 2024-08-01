@@ -11,9 +11,6 @@ const Cart = () => {
     const context = useContext(Context)
     const loadingCart = new Array(4).fill(null)
 
-    // let token =  localStorage.getItem("token");
-    // let getToken = JSON.parse(token);
-
 
     const fetchData = async() =>{
         
@@ -21,8 +18,7 @@ const Cart = () => {
             method : SummaryApi.addToCartProductView.method,
             credentials : 'include',
             headers : {
-                "content-type" : 'application/json',
-                // Authorization: getToken,
+                "content-type" : 'application/json'
             },
         })
        
@@ -52,8 +48,7 @@ const Cart = () => {
             method : SummaryApi.updateCartProduct.method,
             credentials : 'include',
             headers : {
-                "content-type" : 'application/json',
-                // Authorization: getToken,
+                "content-type" : 'application/json'
             },
             body : JSON.stringify(
                 {   
@@ -78,8 +73,7 @@ const Cart = () => {
                 method : SummaryApi.updateCartProduct.method,
                 credentials : 'include',
                 headers : {
-                    "content-type" : 'application/json',
-                    // Authorization: getToken,
+                    "content-type" : 'application/json'
                 },
                 body : JSON.stringify(
                     {   
@@ -103,8 +97,7 @@ const Cart = () => {
             method : SummaryApi.deleteCartProduct.method,
             credentials : 'include',
             headers : {
-                "content-type" : 'application/json',
-                // Authorization: getToken,
+                "content-type" : 'application/json'
             },
             body : JSON.stringify(
                 {   
@@ -128,8 +121,7 @@ const Cart = () => {
             method : SummaryApi.payment.method,
             credentials : 'include',
             headers : {
-                "content-type" : 'application/json',
-                // Authorization: getToken,
+                "content-type" : 'application/json'
             },
             body : JSON.stringify({
                 cartItems : data
