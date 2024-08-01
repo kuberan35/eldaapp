@@ -49,7 +49,7 @@ const UploadProduct = ({
   }
 
   const handleDeleteProductImage = async(index)=>{
-    console.log("image index",index) 
+    console.log("image index",index)
     
     const newProductImage = [...data.productImage]
     newProductImage.splice(index,1)
@@ -68,15 +68,11 @@ const UploadProduct = ({
   const handleSubmit = async(e) =>{
     e.preventDefault()
     
-    // let token =  localStorage.getItem("token");
-    // let getToken = JSON.parse(token);
-
     const response = await fetch(SummaryApi.uploadProduct.url,{
       method : SummaryApi.uploadProduct.method,
       credentials : 'include',
       headers : {
-        "content-type" : "application/json",
-        // Authorization: getToken,
+        "content-type" : "application/json"
       },
       body : JSON.stringify(data)
     })
