@@ -207,7 +207,7 @@ const Header = () => {
                 <Link to="/about" className="py-1" onClick={() => setMobileMenuDisplay(false)}>About us</Link>
                 {
                   user?.role === ROLE.ADMIN && (
-                    <Link to="/admin-panel/all-products" className='py-1' onClick={() => setMobileMenuDisplay(false)}>Admin Panel</Link>
+                    <Link to="/admin-panel/all-products" className='py-1' onClick={() => setMobileMenuDisplay(true)}>Admin Panel</Link>
                   )
                 }
               </nav>
