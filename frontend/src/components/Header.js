@@ -25,16 +25,10 @@ const Header = () => {
   const searchQuery = URLSearch.getAll("q")
   const [search,setSearch] = useState(searchQuery)
 
-  console.log(user);
-
-  // let token =  localStorage.getItem("token");
-  // let getToken = JSON.parse(token);
-
-  const handleLogout = async() => {
+ const handleLogout = async() => {
     const fetchData = await fetch(SummaryApi.logout_user.url,{
       method : SummaryApi.logout_user.method,
-      credentials : 'include',
-      // Authourization: getToken,
+      credentials : 'include'
     })
 
     const data = await fetchData.json()
@@ -60,9 +54,6 @@ const Header = () => {
     }else{
       navigate("/search")
     }
-  }
-  const handleBack = () => {
-    navigate(-1);
   }
   // const toggleNavbar = () => {
   //   setMobileMenuDisplay(!mobileMenuDisplay);
