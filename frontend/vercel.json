@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.js" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "REACT_APP_BACKEND_URL": "https://eldaapp.vercel.app"
+  },
+  "rewrites": [
+    { "source": "/old-route", "destination": "/new-route" }
+  ]
+}
