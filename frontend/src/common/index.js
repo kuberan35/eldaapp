@@ -2,7 +2,7 @@
 
 // import { upload } from "../../../backend/controller/applicationController"
 
-const backendDomin =  "https://eldaapp.vercel.app"
+const backendDomin = process.env.REACT_APP_BACKEND_URL|| "https://eldaapp.vercel.app"
 
 const SummaryApi = {
     signUP : {
