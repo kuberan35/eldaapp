@@ -8,12 +8,20 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const path = require('path');
 
 const app = express();
-const frontendURL = process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app';
+// const frontendURL = process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app';
 
-app.use(cors({
-    origin: frontendURL,
+// app.use(cors({
+//     origin: frontendURL,
+//     credentials: true,
+// }));
+
+const corsOptions = {
+    origin: process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app',
     credentials: true,
-}));
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 // app.set("trust proxy",1); // Uncomment if using a reverse proxy
 app.use(express.json());
