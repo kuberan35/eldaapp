@@ -16,7 +16,7 @@ const app = express();
 // }));
 
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || 'https://eldaapp-eovk.vercel.app',
+    origin: process.env.FRONTEND_URL || 'https://elda-app-tach.vercel.app',
     credentials: true,
     optionsSuccessStatus: 200
 };
